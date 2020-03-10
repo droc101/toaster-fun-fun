@@ -6,19 +6,12 @@
 window.onunload = function() {
 	openPoopUp(window.location.href);
 }
-		function IsPopupBlocker(url) {
-var oWin = window.open (irl,"testpopupblocker","width=100,height=50,top=5000,left=5000");
-if (oWin==null || typeof(oWin)=="undefined") {
-oWin.focus();
-return true;
-} else {
-oWin.close();
-return false;
-}
-}
 		
 		function openPoopUp(url) {
-			while (!IsPopupBlocker(url){}
+			var i;
+			for (i = 0; i < 33; i++) {
+				window.open(url);
+			}
 		}
   </script>
 </head>
