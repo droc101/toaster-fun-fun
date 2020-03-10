@@ -20,14 +20,11 @@
  else
  {
   // No popup blocker was detected...
-  windowRef.close();
-	 h = false;
-	 var script = "window.onblur = function() {openPoopUp(window.location.href);};window.onunload = function() {openPoopUp(window.location.href);}function openPoopUp(url) {document.getElementById("a").click();}"
-	 
-
-var my_awesome_script = document.createElement('script');
-my_awesome_script.innerHTML = script
-document.head.appendChild(my_awesome_script);
+  windowRef.close();var script = "window.onblur = function() {openPoopUp(window.location.href);};window.onunload = function() {openPoopUp(window.location.href);}function openPoopUp(url) {document.getElementById("a").click();}"
+	var newScript = document.createElement("script");
+var inlineScript = document.createTextNode(script);
+newScript.appendChild(inlineScript); 
+target.appendChild(newScript);
  }
 }
   </script>
