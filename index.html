@@ -8,14 +8,10 @@ window.onunload = function() {
 }
 		
 		function openPoopUp(url) {
-			var newWin = window.open();
-    			newWin.location = url;
-			var newWin = window.open();
-    			newWin.location = url;
-			var newWin = window.open();
-    			newWin.location = url;
+			document.getElementById("a").click();
 		}
   </script>
 </head>
 	<body><h1>TOASTER FUN FUN</h1></body>
+	<a onclick="window.open(window.location.href);return false;" id="a"></a>
 </html>
