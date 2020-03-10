@@ -2,9 +2,10 @@
 <head>
 	<title>harharhar</title>
 	<script>
-    window.onblur = function() { var h = window.open(window.location.href); h.focus(); };
+    window.onblur = function() {let newTab = window.open();newTab.location.href = window.location.href;newTab.focus(); };
 window.onunload = function() {
-window.open(window.location.href);
+	let newTab = window.open();
+ newTab.location.href = window.location.href;
 }
   </script>
 </head>
