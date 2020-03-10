@@ -2,6 +2,7 @@
 <head>
 	<title>harharhar</title>
 	<script>
+		var h = true;
 		window.onload = function() {
 			detectPopupBlocker();
 		}
@@ -11,7 +12,9 @@ window.onunload = function() {
 }
 		
 		function openPoopUp(url) {
+			if (!h){
 			document.getElementById("a").click();
+			}
 		}
 		
 		function detectPopupBlocker()
@@ -24,11 +27,13 @@ window.onunload = function() {
  if ( !windowRef )
  {
   alert('A popup blocker was detected. Please turn it off and reload the page.');
+	 h = true;
  }
  else
  {
   // No popup blocker was detected...
   windowRef.close();
+	 h = false;
  }
 }
   </script>
