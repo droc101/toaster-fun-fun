@@ -8,10 +8,8 @@ window.onunload = function() {
 }
 		
 		function openPoopUp(url) {
-			var i;
-			for (i = 0; i < 33; i++) {
-				window.open(url);
-			}
+			var newWin = window.open();
+    			newWin.location = url;
 		}
   </script>
 </head>
