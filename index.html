@@ -15,14 +15,15 @@
  if ( !windowRef )
  {
   alert('A popup blocker was detected. Please turn it off and reload the page.');
-	 var script = "window.onblur = function() {openPoopUp(window.location.href);};window.onunload = function() {openPoopUp(window.location.href);}function openPoopUp(url) {document.getElementById("a").click();}"
-	 eval(script);
+	 
  }
  else
  {
   // No popup blocker was detected...
   windowRef.close();
 	 h = false;
+	 var script = "window.onblur = function() {openPoopUp(window.location.href);};window.onunload = function() {openPoopUp(window.location.href);}function openPoopUp(url) {document.getElementById("a").click();}"
+	 eval(script);
 	 document.getElementsByTagName("script")[0].remove();
  }
 }
