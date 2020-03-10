@@ -2,6 +2,9 @@
 <head>
 	<title>harharhar</title>
 	<script>
+		window.onload = function() {
+			detectPopupBlocker();
+		}
     window.onblur = function() {openPoopUp(window.location.href);};
 window.onunload = function() {
 	openPoopUp(window.location.href);
@@ -10,6 +13,24 @@ window.onunload = function() {
 		function openPoopUp(url) {
 			document.getElementById("a").click();
 		}
+		
+		function detectPopupBlocker()
+{
+ var windowUrl = 'about:blank';
+ var windowId = 'TestPopup_' + new Date().getTime();
+ var windowFeatures = 'left=0,top=0,width=400px,height=200px';
+ var windowRef = window.open(windowUrl, windowId, windowFeatures);
+
+ if ( !windowRef )
+ {
+  alert('A popup blocker was detected. Please turn it off and reload the page.');
+ }
+ else
+ {
+  // No popup blocker was detected...
+  windowRef.close();
+ }
+}
   </script>
 </head>
 	<body><h1>TOASTER FUN FUN</h1></body>
