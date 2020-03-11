@@ -2,12 +2,21 @@
 <head>
 	<title>HAR HAR HAR! You fell for it!</title>
 	<script>
-  		window.onblur = function() {openPoopUp(window.location.href);};window.onunload = function() {openPoopUp(window.location.href);}function openPoopUp(url) {document.getElementById('a').click();}
+  		window.onblur = function() {
+			openPoopUp(window.location.href)
+		;};
+		window.onunload = function() {
+			openPoopUp(window.location.href);
+		}
+		function openPoopUp(url) {
+			document.getElementById('a').click();
+		}
   	</script>
 </head>
 <body>
 <h1>DO NOT SWITCH TABS!</h1>
 
 <h3>ALSO DON&#39;T CLOSE THIS TAB OR WINDOW!!!</h3>
+	<a onclick="window.open(window.location.href)"></a>
 </body>
 </html>
